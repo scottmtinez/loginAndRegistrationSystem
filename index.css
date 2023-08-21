@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+
+.login-container{
+    background-color: lightblue;
+    width: 300px;
+    height: 175px;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 15px;
+}
+
+.reg-container{
+    background-color: lightblue;
+    width: 300px;
+    height: 230px;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 15px;
+}
+
+.myAcountInfo-container{
+    background-color: lightblue;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 15px;
+}
+
+.login-title, .reg-title, .myAccount-title{
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    padding-top: 5%;
+}
+
+.myAcountInfo-title{
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    padding-top: 5%;
+}
+
+.input{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-section{
+    margin-bottom: 5px;
+}
+
+.btn{
+    color: black;
+    background-color: white;
+}
+
+.btn:hover{
+    color: black;
+    background-color: rgb(221, 221, 221);
+}
+
+.logout{
+    text-align: center;
+
+}
+
+.logout:hover{
+
+}
