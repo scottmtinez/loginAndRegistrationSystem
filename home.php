@@ -8,42 +8,50 @@
     <link rel="stylesheet" href="index.css"> 
 </head>
 <body>
-    <script></script>
-    <div class="login-container">
+    <div class="login-container" id="login-container">
         <form class="login-form" action="myAccount.php" method="post">
             <h1 class="login-title">LOGIN</h1>
             <div class="input">
-                <input type="text" class="input-section" placeholder="Username..."><br>
-                <input type="password" class="input-section" placeholder="Password..."><br>
+                <input type="text" class="input-section" name="username" placeholder="Username..."><br>
+                <input type="password" class="input-section" name="password" placeholder="Password..."><br>
                 <input type="submit" class="btn" value="Login">
-                <div>Dont have an Account? Click <a href="#reg-container">Here.</a></div>
+                <div id="loginSwitch">Dont have an Account? Click <a href="#">Here.</a></div>
             </div>
         </form>
     </div>
 
     <div class="reg-container" id="reg-container">
-        <form class="reg-login" action="myAccount.php" method="post">
+        <form class="reg-form" action="displayReg.php" method="post">
             <h1 class="reg-title">SIGNUP</h1>
             <div class="input">
-                <input type="text" class="input-section" placeholder="Username..."><br>
-                <input type="email" class="input-section" placeholder="Email..."><br>
-                <input type="password" class="input-section" placeholder="Password..."><br>
-                <input type="password" class="input-section" placeholder="Confirm Password..."><br>
+                <input type="text" class="input-section" name="username" placeholder="Username..."><br>
+                <input type="email" class="input-section" name="email" placeholder="Email..."><br>
+                <input type="password" class="input-section" name="password" placeholder="Password..."><br>
+                <input type="password" class="input-section" name="confPassword" placeholder="Confirm Password..."><br>
                 <input type="submit" class="btn" value="Signup">
-                <div>Already have an Account? Click <a href="#login-container">Here.</a></div>
+                <div id="signupSwitch">Already have an Account? Click <a href="#">Here.</a></div>
             </div>    
         </form>
     </div>
 
-    <div class="myAcountInfo-container">
-        <form class="myAccount-info">
-            <h1 class="myAccount-title">MY INFO</h1>
-            <div class="input">
-                <label>Username: </label><br>
-                <label>Email: </label><br>
-                <input type="button" class="logout" value="Logout">
-            </div>
-        </form>
-    </div>
+    <script>
+        const loginContainer = document.getElementById("login-container");
+        const signupContainer = document.getElementById("reg-container");
+        const loginSwitch = document.getElementById("loginSwitch");
+        const signupSwitch = document.getElementById("signupSwitch");
+
+        loginSwitch.addEventListener("click", function(event) {
+            event.preventDefault();
+            loginContainer.style.display = "none";
+            signupContainer.style.display = "block";
+        });
+
+        signupSwitch.addEventListener("click", function(event) {
+            event.preventDefault();
+            signupContainer.style.display = "none";
+            loginContainer.style.display = "block";
+        });
+
+    </script>
 </body>
 </html>
